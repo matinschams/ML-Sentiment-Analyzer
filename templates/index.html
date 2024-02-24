@@ -1,20 +1,29 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ML Sentiment Analyzer</title>
+    <title>Reddit Sentiment Analyzer</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="{{ url_for('static', filename='styles.css') }}" />
   </head>
   <body>
-    <h1 class="header">Sentiment Analyzer</h1>
-    <form action="/analyze" method="POST">
-      <label for="text">Enter Text Below</label><br />
-      <textarea id="text" name="text" rows="4" cols="50"></textarea><br />
-      <input type="submit" value="Analyze" />
-    </form>
+    <div class="container">
+      <h1>Reddit Sentiment Analyzer</h1>
+      <form action="/analyze" method="POST">
+        <div class="form-group">
+          <label for="subreddit">Subreddit:</label>
+          <input type="text" id="subreddit" name="subreddit" required />
+        </div>
+        <div class="form-group">
+          <label for="keyword">Keyword:</label>
+          <input type="text" id="keyword" name="keyword" required />
+        </div>
+        <button type="submit">Analyze</button>
+      </form>
+    </div>
   </body>
 </html>

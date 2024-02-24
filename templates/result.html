@@ -1,19 +1,22 @@
+<!-- result.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis Result</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="{{ url_for('static', filename='styles.css') }}" />
-    <title>Sentiment Analysis Result</title>
   </head>
   <body>
-    <h1>Sentiment Analysis Result</h1>
-    <div class="result {{ sentiment_label }}">
+    <div class="container">
+      <h1>Analysis Result</h1>
+      <p>Subreddit: {{ subreddit }}</p>
+      <p>Keyword: {{ keyword }}</p>
       <p>Sentiment: {{ sentiment_label }}</p>
-      <p>Polarity: {{polarity}} Subjectivity: {{subjectivity}}</p>
+      <p>Average Sentiment: {{ average_sentiment }}</p>
     </div>
   </body>
 </html>
