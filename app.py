@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 def authenticate_reddit():
     reddit = praw.Reddit(
-        client_id='uEpj3XpBBXxwn_Evc_nDHA',
-        client_secret='tfaBTItElM2lJwFF1ETDBVEzjUjB3w',
-        user_agent='Sentiment Analysis by /u/matinbean'
+        client_id='insert_id',
+        client_secret='insert_secret',
+        user_agent='insert user_agent'
     )
     return reddit
 
